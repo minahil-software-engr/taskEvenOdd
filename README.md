@@ -1,28 +1,45 @@
 # Even or Odd Checker
 
-Yeh ek JavaScript project hai jo user se ek number input leta hai aur batata hai ke woh Even hai ya Odd. Is project me is issue ko solve karne ke 3 alag methods use kiye gaye hain.
+This is a JavaScript project that takes a number input from the user and checks whether it is Even or Odd using three different methods.
 
 ## Project Files and Methods
 
 1. Modulo Method
 File: task1-1.js
-Logic: Number ko 2 se divide karke remainder check karta hai. Remainder 0 ho toh Even, aksar Odd.
+Logic: Divides the number by 2 and checks the remainder. If the remainder is 0, the number is Even; otherwise, it is Odd.
 
 2. Bitwise Method
 File: task1-2.js
-Logic: Number ki binary form ke last bit ko check karta hai. Last bit 0 ho toh Even, aksar Odd.
+Logic: Checks the last bit of the number in binary format using the bitwise AND operator. If the last bit is 0, the number is Even; otherwise, it is Odd.
 
 3. Subtraction Loop Method
 File: Task1.js
-Logic: Number me se 2 minus karta rehta hai jab tak value 2 se choti na ho jaye. End me 0 bache toh Even, aksar Odd.
+Logic: Continuously subtracts 2 from the number until the remaining value is less than 2. If 0 remains, the number is Even; otherwise, it is Odd.
+
+## Comparison: Which Method is Best?
+
+1. Modulo Method (%): BEST FOR GENERAL USE
+- Pros: Simple, easy to read, and standard practice in web development.
+- Cons: Slightly slower than bitwise operations at a microchip level, but performance difference is negligible in JavaScript.
+
+2. Bitwise Method (&): BEST FOR PERFORMANCE
+- Pros: Extremely fast because it works directly at the binary level.
+- Cons: Slightly harder for beginners to read.
+
+3. Subtraction Loop Method (-2): WORST METHOD
+- Pros: Good for understanding basic logic and loops.
+- Cons: Very inefficient. For large numbers like 1,000,000, it runs 500,000 times, causing high memory and CPU usage.
+
+Conclusion:
+The Modulo Method is the best choice for clean and readable code. The Bitwise Method is best if maximum performance is needed.
 
 ## How to Run
 
-1. Kisi bhi HTML file ko browser me open karein.
-2. Prompt pop-up me koi bhi number enter karein.
-3. Screen par alert message me result show ho jayega.
+1. Open any of the HTML files in a browser.
+2. Enter a number in the prompt window.
+3. View the result in the alert box.
 
 ## Key Features
 
-1. Input Validation: Invalid inputs aur khali spaces ko reject karta hai.
-2. Negative Numbers: Positive aur negative dono numbers ko sahi handle karta hai.
+1. Input Validation: Rejects empty inputs and non-numeric values.
+2. Negative Numbers: Correctly handles positive and negative integers.
